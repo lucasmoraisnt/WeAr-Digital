@@ -17,8 +17,8 @@
 - Experimentar
     - [Cadastrar](#cadastrar-experimentar)
     - [Listar todas](#listar-todas-experimentar)
-    - Apagar
-    - Alterar
+    - [Apagar](#apagar-experimentar)
+    - [Alterar](#alterar-experimentar)
     - [Mostrar os detalhes](#detalhar-experimentar)
 - Roupa
     - [Cadastrar](#cadastrar-roupa)
@@ -88,7 +88,7 @@
 
 ---
 
-### Listar Todas Experimentar
+### Listar Todos Experimentar
 `GET` /wear/api/experimentar
 
 **Exemplo de corpo da resposta**
@@ -121,6 +121,46 @@
 | código | descrição 
 |-|-
 | 200 | dados retornados no corpo da resposta
+| 404 | não foi encontrada roupa com o id informado
+
+---
+
+### Apagar Experimentar
+`DELETE` /wear/api/experimentar/{id}
+
+**Exemplo de corpo da resposta**
+
+```js
+{
+    "mensagem": "Roupa apagada com sucesso"
+}
+```
+
+**Códigos de Resposta**
+
+| código | descrição 
+|-|-
+| 200 | dados apagados com sucesso
+| 404 | não foi encontrada roupa com o id informado
+
+---
+
+### Alterar Experimentar
+`PUT` /wear/api/experimentar/{id}
+
+**Exemplo de corpo da resposta**
+
+```js
+{
+    "mensagem": "Roupa atualizada com sucesso"
+}
+```
+
+**Códigos de Resposta**
+
+| código | descrição 
+|-|-
+| 200 | dados atualizados com sucesso
 | 404 | não foi encontrada roupa com o id informado
 
 ---
