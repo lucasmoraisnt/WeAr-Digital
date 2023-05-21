@@ -16,7 +16,7 @@
 ## Endpoints
 - Experimentar
     - [Cadastrar](#cadastrar-experimentar)
-    - [Listar todas](#listar-todas-experimentar)
+    - [Listar todas](#listar-experimentar)
     - [Apagar](#apagar-experimentar)
     - [Alterar](#alterar-experimentar)
     - [Mostrar os detalhes](#detalhar-experimentar)
@@ -88,7 +88,7 @@
 
 ---
 
-### Listar Todos Experimentar
+### Listar Experimentar
 `GET` /wear/api/experimentar
 
 **Exemplo de corpo da resposta**
