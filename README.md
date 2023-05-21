@@ -26,7 +26,6 @@
     - Apagar
     - Alterar
    - [Mostrar os detalhes](#detalhar-roupa)
-- Categorias
 
 ---
 
@@ -86,6 +85,8 @@
 |-|-
 | 200 | dados retornados no corpo da resposta
 | 404 | não foi encontrada roupa com o id informado
+
+---
 
 
 ### Cadastrar Roupa
