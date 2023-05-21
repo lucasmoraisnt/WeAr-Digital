@@ -16,7 +16,7 @@
 ## Endpoints
 - Experimentar
     - [Cadastrar](#cadastrar-experimentar)
-    - Listar todas
+    - [Listar todas](#listar-todas-experimentar)
     - Apagar
     - Alterar
     - [Mostrar os detalhes](#detalhar-experimentar)
@@ -72,9 +72,46 @@
         "roupa_id" : 1,
         "nome": "Camiseta"
     },
-    "data": "2023-01-27",
+    "data": "2023-01-01",
     "descricao": "camiseta de praticar esportes",
     "cor": ["Branca", "Preto", "Azul"],
+    "tamanho": ["P", "M", "G"]
+}
+```
+
+**Códigos de Resposta**
+
+| código | descrição 
+|-|-
+| 200 | dados retornados no corpo da resposta
+| 404 | não foi encontrada roupa com o id informado
+
+---
+
+### Listar Todas Experimentar
+`GET` /wear/api/experimentar
+
+**Exemplo de corpo da resposta**
+
+```js
+{
+    "roupa": {
+        "roupa_id" : 1,
+        "nome": "Camiseta"
+    },
+    "data": "2023-01-01",
+    "descricao": "camiseta de praticar esportes",
+    "cor": ["Branca", "Preto", "Azul"],
+    "tamanho": ["P", "M", "G"]
+},
+{
+    "roupa": {
+        "roupa_id" : 2,
+        "nome": "Shorts"
+    },
+    "data": "2023-01-01",
+    "descricao": "shorts de praticar esportes",
+    "cor": ["Branca", "Preto"],
     "tamanho": ["P", "M", "G"]
 }
 ```
