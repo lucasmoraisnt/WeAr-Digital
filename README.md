@@ -184,7 +184,7 @@
 {
     "id" : 1,
     "nome": "Camiseta",
-    "codigo": "123"
+    "codigo": "123",
     "preco": 50,00,
     "cor": ["Azul", "Preto"],
     "tamanho": ["P", "M", "G"]
@@ -211,7 +211,7 @@
         "id" : 1,
         "nome": "Camiseta"
     },
-    "codigo": "123"
+    "codigo": "123",
     "preco": 50,00,
     "cor": ["Azul", "Preto"],
     "tamanho": ["P", "M", "G"]
@@ -238,7 +238,7 @@
         "id" : 1,
         "nome": "Camiseta"
     },
-    "codigo": "123"
+    "codigo": "123",
     "preco": 50,00,
     "cor": ["Azul", "Preto"],
     "tamanho": ["P", "M", "G"]
@@ -248,7 +248,7 @@
         "id" : 2,
         "nome": "Calça"
     },
-    "codigo": "321"
+    "codigo": "321",
     "preco": 100,00,
     "cor": ["Azul", "Preto", "Branco"],
     "tamanho": ["P", "M", "G"]
