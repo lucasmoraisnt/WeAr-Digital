@@ -37,8 +37,8 @@
 | roupa_id | int | sim | é o id de uma roupa previamente cadastrada
 | data | data | sim | é data do cadastro de experimentar
 | descricao | texto | não | uma descrição com no máximo 255 caracteres
-| cor | Array | não | são as cores disponíveis para a roupa
-| tamanho | Array | não | são os tamanhos disponíveis para a roupa
+| cor | lista | não | são as cores disponíveis para a roupa
+| tamanho | lista | não | são os tamanhos disponíveis para a roupa
 
 **Exemplo de corpo do request**
 
@@ -98,8 +98,8 @@
 | nome | texto | sim | é o nome da roupa
 | codigo | texto | sim | é o código da roupa
 | preco | int | sim | é o preço da roupa
-| cor | Array | não | são as cores disponíveis para a roupa
-| tamanho | Array | não | são os tamanhos disponíveis para a roupa
+| cor | lista | não | são as cores disponíveis para a roupa
+| tamanho | lista | não | são os tamanhos disponíveis para a roupa
 
 **Exemplo de corpo do request**
 
