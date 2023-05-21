@@ -22,10 +22,10 @@
     - [Mostrar os detalhes](#detalhar-experimentar)
 - Roupa
     - [Cadastrar](#cadastrar-roupa)
-    - Listar todas
-    - Apagar
-    - Alterar
-   - [Mostrar os detalhes](#detalhar-roupa)
+    - [Listar todas](#listar-roupa)
+    - [Apagar](#apagar-roupa)
+    - [Alterar](#alterar-roupa)
+    - [Mostrar os detalhes](#detalhar-roupa)
 
 ---
 
@@ -74,7 +74,7 @@
     },
     "data": "2023-01-01",
     "descricao": "camiseta de praticar esportes",
-    "cor": ["Branca", "Preto", "Azul"],
+    "cor": ["Branco","Preto", "Azul"],
     "tamanho": ["P", "M", "G"]
 }
 ```
@@ -101,7 +101,7 @@
     },
     "data": "2023-01-01",
     "descricao": "camiseta de praticar esportes",
-    "cor": ["Branca", "Preto", "Azul"],
+    "cor": ["Branco", "Preto", "Azul"],
     "tamanho": ["P", "M", "G"]
 },
 {
@@ -111,7 +111,7 @@
     },
     "data": "2023-01-01",
     "descricao": "shorts de praticar esportes",
-    "cor": ["Branca", "Preto"],
+    "cor": ["Branco", "Preto"],
     "tamanho": ["P", "M", "G"]
 }
 ```
@@ -215,6 +215,16 @@
     "preco": 50,00,
     "cor": ["Azul", "Preto"],
     "tamanho": ["P", "M", "G"]
+},
+{
+    "roupa": {
+        "id" : 2,
+        "nome": "Calça"
+    },
+    "codigo": "321"
+    "preco": 100,00,
+    "cor": ["Azul", "Preto"],
+    "tamanho": ["P", "M", "G"]
 }
 ```
 
@@ -223,4 +233,81 @@
 | código | descrição 
 |-|-
 | 200 | dados retornados no corpo da resposta
+| 404 | não foi encontrada roupa com o id informado
+
+---
+
+### Listar Roupa
+`GET` /wear/api/roupa
+
+**Exemplo de corpo da resposta**
+
+```js
+{
+   "roupa": {
+        "id" : 1,
+        "nome": "Camiseta"
+    },
+    "codigo": "123"
+    "preco": 50,00,
+    "cor": ["Azul", "Preto"],
+    "tamanho": ["P", "M", "G"]
+},
+{
+    "roupa": {
+        "roupa_id" : 2,
+        "nome": "Shorts"
+    },
+    "data": "2023-01-01",
+    "descricao": "shorts de praticar esportes",
+    "cor": ["Branca", "Preto"],
+    "tamanho": ["P", "M", "G"]
+}
+```
+
+**Códigos de Resposta**
+
+| código | descrição 
+|-|-
+| 200 | dados retornados no corpo da resposta
+| 404 | não foi encontrada roupa com o id informado
+
+---
+
+### Apagar Experimentar
+`DELETE` /wear/api/experimentar/{id}
+
+**Exemplo de corpo da resposta**
+
+```js
+{
+    "mensagem": "Roupa apagada com sucesso"
+}
+```
+
+**Códigos de Resposta**
+
+| código | descrição 
+|-|-
+| 200 | dados apagados com sucesso
+| 404 | não foi encontrada roupa com o id informado
+
+---
+
+### Alterar Experimentar
+`PUT` /wear/api/experimentar/{id}
+
+**Exemplo de corpo da resposta**
+
+```js
+{
+    "mensagem": "Roupa atualizada com sucesso"
+}
+```
+
+**Códigos de Resposta**
+
+| código | descrição 
+|-|-
+| 200 | dados atualizados com sucesso
 | 404 | não foi encontrada roupa com o id informado
