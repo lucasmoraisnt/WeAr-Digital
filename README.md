@@ -215,16 +215,6 @@
     "preco": 50,00,
     "cor": ["Azul", "Preto"],
     "tamanho": ["P", "M", "G"]
-},
-{
-    "roupa": {
-        "id" : 2,
-        "nome": "Calça"
-    },
-    "codigo": "321"
-    "preco": 100,00,
-    "cor": ["Azul", "Preto"],
-    "tamanho": ["P", "M", "G"]
 }
 ```
 
@@ -255,12 +245,12 @@
 },
 {
     "roupa": {
-        "roupa_id" : 2,
-        "nome": "Shorts"
+        "id" : 2,
+        "nome": "Calça"
     },
-    "data": "2023-01-01",
-    "descricao": "shorts de praticar esportes",
-    "cor": ["Branca", "Preto"],
+    "codigo": "321"
+    "preco": 100,00,
+    "cor": ["Azul", "Preto", "Branco"],
     "tamanho": ["P", "M", "G"]
 }
 ```
@@ -274,8 +264,8 @@
 
 ---
 
-### Apagar Experimentar
-`DELETE` /wear/api/experimentar/{id}
+### Apagar Roupa
+`DELETE` /wear/api/roupa/{id}
 
 **Exemplo de corpo da resposta**
 
@@ -294,8 +284,8 @@
 
 ---
 
-### Alterar Experimentar
-`PUT` /wear/api/experimentar/{id}
+### Alterar Roupa
+`PUT` /wear/api/roupa/{id}
 
 **Exemplo de corpo da resposta**
 
