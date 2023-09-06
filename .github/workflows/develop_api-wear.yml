@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'api-wear'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_584FF3BF1145492FB3EF35D3BA8D8EBC }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E820B07968C748BDB2CD5C69C7CB9F55 }}
           package: '*.jar'
