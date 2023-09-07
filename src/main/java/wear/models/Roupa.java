@@ -36,7 +36,7 @@ public class Roupa {
     @Min(value=0, message = "o valor da preco deve ser positivo")
     private BigDecimal preco;
 
-    private Cor cor;
+    private String cor;
 
     private int tamanho;
 }
