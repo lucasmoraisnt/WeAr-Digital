@@ -12,7 +12,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.hateoas.EntityModel;
 import wear.controllers.ExperimentarController;
 import wear.controllers.RoupaController;
-import wear.enums.Cor;
 
 import java.time.LocalDate;
 
@@ -36,9 +35,9 @@ public class Experimentar {
     @NotBlank @Size(min = 5, max = 255)
     private String descricao;
 
-    private Cor cor;
+    private String cor;
 
-    private int tamanho;
+    private String tamanho;
 
     @NotNull
     @ManyToOne

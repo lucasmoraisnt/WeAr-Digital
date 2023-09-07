@@ -12,7 +12,6 @@ import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import wear.enums.Cor;
 
 import java.math.BigDecimal;
 
@@ -38,5 +37,5 @@ public class Roupa {
 
     private String cor;
 
-    private int tamanho;
+    private String tamanho;
 }
