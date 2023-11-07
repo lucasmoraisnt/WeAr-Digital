@@ -1,0 +1,27 @@
+[
+    {
+        "nome": "João Silva",
+        "email": "joao@email.com",
+        "senha": "senha123"
+    },
+    {
+        "nome": "Maria Santos",
+        "email": "maria@email.com",
+        "senha": "senha456"
+    },
+    {
+        "nome": "Pedro Oliveira",
+        "email": "pedro@email.com",
+        "senha": "senha789"
+    },
+    {
+        "nome": "Ana Pereira",
+        "email": "ana@email.com",
+        "senha": "senha1011"
+    },
+    {
+        "nome": "Carlos Rodrigues",
+        "email": "carlos@email.com",
+        "senha": "senha1213"
+    }
+]

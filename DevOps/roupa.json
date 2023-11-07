@@ -1,0 +1,37 @@
+[
+    {
+        "nome": "Camiseta Azul",
+        "codigo": "CAM123",
+        "preco": 29.99,
+        "cor": "Azul",
+        "tamanho": 42
+    },
+    {
+        "nome": "Calça Jeans",
+        "codigo": "CAL456",
+        "preco": 49.99,
+        "cor": "Azul",
+        "tamanho": 34
+    },
+    {
+        "nome": "Vestido Floral",
+        "codigo": "VES789",
+        "preco": 69.99,
+        "cor": "Floral",
+        "tamanho": 38
+    },
+    {
+        "nome": "Tênis Branco",
+        "codigo": "TEN1011",
+        "preco": 79.99,
+        "cor": "Branco",
+        "tamanho": 40
+    },
+    {
+        "nome": "Casaco de Inverno",
+        "codigo": "CAS1213",
+        "preco": 89.99,
+        "cor": "Preto",
+        "tamanho": 36
+    }
+]

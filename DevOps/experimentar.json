@@ -1,0 +1,37 @@
+[
+    {
+        "data": "2023-09-01",
+        "descricao": "Experimentando camiseta azul",
+        "cor": "Azul",
+        "tamanho": 42,
+        "roupa_id": 1
+    },
+    {
+        "data": "2023-09-02",
+        "descricao": "Experimentando calça jeans",
+        "cor": "Azul",
+        "tamanho": 34,
+        "roupa_id": 2
+    },
+    {
+        "data": "2023-09-03",
+        "descricao": "Experimentando vestido floral",
+        "cor": "Floral",
+        "tamanho": 38,
+        "roupa_id": 3
+    },
+    {
+        "data": "2023-09-04",
+        "descricao": "Experimentando tênis branco",
+        "cor": "Branco",
+        "tamanho": 40,
+        "roupa_id": 4
+    },
+    {
+        "data": "2023-09-05",
+        "descricao": "Experimentando casaco de inverno",
+        "cor": "Preto",
+        "tamanho": 36,
+        "roupa_id": 5
+    }
+]
