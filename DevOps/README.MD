@@ -20,3 +20,293 @@
 - 2º Você irá dizer qual o repositório e branch você estará fazendo o build
 - 3º Irá selecionar o template do seu projeto, no nosso caso iremos utilizar Maven e ali iremos configurar nossa Pipeline conforme está no nosso arquivo <a href="https://github.com/lucasmoraisnt/WeAr-Digital/blob/main/DevOps/pipeline.yaml">YAML</a>
 - 4º Após finalizar as configurações você irá salvar e rodar o build
+
+## Endpoints
+- Experimentar
+    - [Cadastrar](#cadastrar-experimentar)
+    - [Listar todas](#listar-experimentar)
+    - [Apagar](#apagar-experimentar)
+    - [Alterar](#alterar-experimentar)
+    - [Mostrar os detalhes](#detalhar-experimentar)
+- Roupa
+    - [Cadastrar](#cadastrar-roupa)
+    - [Listar todas](#listar-roupa)
+    - [Apagar](#apagar-roupa)
+    - [Alterar](#alterar-roupa)
+    - [Mostrar os detalhes](#detalhar-roupa)
+
+---
+
+### Cadastrar Experimentar
+`POST` /wear/api/experimentar
+
+| campo | tipo | obrigatório | descrição
+|-------|------|:-------------:|--
+| roupa_id | int | sim | é o id de uma roupa previamente cadastrada
+| data | data | sim | é data do cadastro de experimentar
+| descricao | texto | não | uma descrição com no máximo 255 caracteres
+| cor | lista | não | são as cores disponíveis para a roupa
+| tamanho | lista | não | são os tamanhos disponíveis para a roupa
+
+**Exemplo de corpo do request**
+
+```js
+{
+    "roupa_id" : 1,
+    "data": "2023-01-01",
+    "descricao": "Calça camuflada",
+    "cor": ["Azul", "Preto"],
+    "tamanho": ["P", "M", "G"]
+}
+```
+
+**Códigos de Resposta**
+
+| código | descrição 
+|-|-
+| 201 | experimentar cadastrado com sucesso
+| 400 | erro na validação dos dados da requisição
+
+---
+
+### Detalhar Experimentar
+`GET` /wear/api/experimentar/{id}
+
+**Exemplo de corpo da resposta**
+
+```js
+{
+    "roupa": {
+        "roupa_id" : 1,
+        "nome": "Camiseta"
+    },
+    "data": "2023-01-01",
+    "descricao": "camiseta de praticar esportes",
+    "cor": ["Branco","Preto", "Azul"],
+    "tamanho": ["P", "M", "G"]
+}
+```
+
+**Códigos de Resposta**
+
+| código | descrição 
+|-|-
+| 200 | dados retornados no corpo da resposta
+| 404 | não foi encontrada roupa com o id informado
+
+---
+
+### Listar Experimentar
+`GET` /wear/api/experimentar
+
+**Exemplo de corpo da resposta**
+
+```js
+{
+    "roupa": {
+        "roupa_id" : 1,
+        "nome": "Camiseta"
+    },
+    "data": "2023-01-01",
+    "descricao": "camiseta de praticar esportes",
+    "cor": ["Branco", "Preto", "Azul"],
+    "tamanho": ["P", "M", "G"]
+},
+{
+    "roupa": {
+        "roupa_id" : 2,
+        "nome": "Shorts"
+    },
+    "data": "2023-01-01",
+    "descricao": "shorts de praticar esportes",
+    "cor": ["Branco", "Preto"],
+    "tamanho": ["P", "M", "G"]
+}
+```
+
+**Códigos de Resposta**
+
+| código | descrição 
+|-|-
+| 200 | dados retornados no corpo da resposta
+| 404 | não foi encontrada roupa com o id informado
+
+---
+
+### Apagar Experimentar
+`DELETE` /wear/api/experimentar/{id}
+
+**Exemplo de corpo da resposta**
+
+```js
+{
+    "mensagem": "Roupa apagada com sucesso"
+}
+```
+
+**Códigos de Resposta**
+
+| código | descrição 
+|-|-
+| 200 | dados apagados com sucesso
+| 404 | não foi encontrada roupa com o id informado
+
+---
+
+### Alterar Experimentar
+`PUT` /wear/api/experimentar/{id}
+
+**Exemplo de corpo da resposta**
+
+```js
+{
+    "mensagem": "Roupa atualizada com sucesso"
+}
+```
+
+**Códigos de Resposta**
+
+| código | descrição 
+|-|-
+| 200 | dados atualizados com sucesso
+| 404 | não foi encontrada roupa com o id informado
+
+---
+
+
+### Cadastrar Roupa
+`POST` /wear/api/ropupa
+
+| campo | tipo | obrigatório | descrição
+|-------|------|:-------------:|--
+| id | int | sim | é o id de uma roupa
+| nome | texto | sim | é o nome da roupa
+| codigo | texto | sim | é o código da roupa
+| preco | int | sim | é o preço da roupa
+| cor | lista | não | são as cores disponíveis para a roupa
+| tamanho | lista | não | são os tamanhos disponíveis para a roupa
+
+**Exemplo de corpo do request**
+
+```js
+{
+    "id" : 1,
+    "nome": "Camiseta",
+    "codigo": "123",
+    "preco": 50,00,
+    "cor": ["Azul", "Preto"],
+    "tamanho": ["P", "M", "G"]
+}
+```
+
+**Códigos de Resposta**
+
+| código | descrição 
+|-|-
+| 201 | experimentar cadastrado com sucesso
+| 400 | erro na validação dos dados da requisição
+
+---
+
+### Detalhar Roupa
+`GET` /wear/api/roupa/{id}
+
+**Exemplo de corpo da resposta**
+
+```js
+{
+    "roupa": {
+        "id" : 1,
+        "nome": "Camiseta"
+    },
+    "codigo": "123",
+    "preco": 50,00,
+    "cor": ["Azul", "Preto"],
+    "tamanho": ["P", "M", "G"]
+}
+```
+
+**Códigos de Resposta**
+
+| código | descrição 
+|-|-
+| 200 | dados retornados no corpo da resposta
+| 404 | não foi encontrada roupa com o id informado
+
+---
+
+### Listar Roupa
+`GET` /wear/api/roupa
+
+**Exemplo de corpo da resposta**
+
+```js
+{
+   "roupa": {
+        "id" : 1,
+        "nome": "Camiseta"
+    },
+    "codigo": "123",
+    "preco": 50,00,
+    "cor": ["Azul", "Preto"],
+    "tamanho": ["P", "M", "G"]
+},
+{
+    "roupa": {
+        "id" : 2,
+        "nome": "Calça"
+    },
+    "codigo": "321",
+    "preco": 100,00,
+    "cor": ["Azul", "Preto", "Branco"],
+    "tamanho": ["P", "M", "G"]
+}
+```
+
+**Códigos de Resposta**
+
+| código | descrição 
+|-|-
+| 200 | dados retornados no corpo da resposta
+| 404 | não foi encontrada roupa com o id informado
+
+---
+
+### Apagar Roupa
+`DELETE` /wear/api/roupa/{id}
+
+**Exemplo de corpo da resposta**
+
+```js
+{
+    "mensagem": "Roupa apagada com sucesso"
+}
+```
+
+**Códigos de Resposta**
+
+| código | descrição 
+|-|-
+| 200 | dados apagados com sucesso
+| 404 | não foi encontrada roupa com o id informado
+
+---
+
+### Alterar Roupa
+`PUT` /wear/api/roupa/{id}
+
+**Exemplo de corpo da resposta**
+
+```js
+{
+    "mensagem": "Roupa atualizada com sucesso"
+}
+```
+
+**Códigos de Resposta**
+
+| código | descrição 
+|-|-
+| 200 | dados atualizados com sucesso
+| 404 | não foi encontrada roupa com o id informado
+
