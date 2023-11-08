@@ -38,7 +38,7 @@
 ---
 
 ### Cadastrar Experimentar
-`POST` /wear/api/experimentar
+`POST` /api/experimentar
 
 | campo | tipo | obrigatório | descrição
 |-------|------|:-------------:|--
@@ -70,7 +70,7 @@
 ---
 
 ### Detalhar Experimentar
-`GET` /wear/api/experimentar/{id}
+`GET` /api/experimentar/{id}
 
 **Exemplo de corpo da resposta**
 
@@ -97,7 +97,7 @@
 ---
 
 ### Listar Experimentar
-`GET` /wear/api/experimentar
+`GET` /api/experimentar
 
 **Exemplo de corpo da resposta**
 
@@ -134,7 +134,7 @@
 ---
 
 ### Apagar Experimentar
-`DELETE` /wear/api/experimentar/{id}
+`DELETE` /api/experimentar/{id}
 
 **Exemplo de corpo da resposta**
 
@@ -154,7 +154,7 @@
 ---
 
 ### Alterar Experimentar
-`PUT` /wear/api/experimentar/{id}
+`PUT` /api/experimentar/{id}
 
 **Exemplo de corpo da resposta**
 
@@ -175,7 +175,7 @@
 
 
 ### Cadastrar Roupa
-`POST` /wear/api/ropupa
+`POST` /api/ropupa
 
 | campo | tipo | obrigatório | descrição
 |-------|------|:-------------:|--
@@ -209,7 +209,7 @@
 ---
 
 ### Detalhar Roupa
-`GET` /wear/api/roupa/{id}
+`GET` /api/roupa/{id}
 
 **Exemplo de corpo da resposta**
 
@@ -236,7 +236,7 @@
 ---
 
 ### Listar Roupa
-`GET` /wear/api/roupa
+`GET` /api/roupa
 
 **Exemplo de corpo da resposta**
 
@@ -273,7 +273,7 @@
 ---
 
 ### Apagar Roupa
-`DELETE` /wear/api/roupa/{id}
+`DELETE` /api/roupa/{id}
 
 **Exemplo de corpo da resposta**
 
@@ -293,7 +293,7 @@
 ---
 
 ### Alterar Roupa
-`PUT` /wear/api/roupa/{id}
+`PUT` /api/roupa/{id}
 
 **Exemplo de corpo da resposta**
 
