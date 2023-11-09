@@ -15,11 +15,25 @@
 - 1º Na parte superior você irá encontrar o nome da equipe que você criou, ao clicar irá aparecer algumas opções e você irá em `Import Repository`
 - 2º Você irá adicionar o link do repositório do GitHub onde está sua aplicação e apertara em importar. Após importar nós iremos para criação da pipeline
 
-## Pipelines
+## CI Pipelines
+### Build
 - 1º Você irá apertar na opção de `New Pipeline` e irá na última opção escrita `Use the classic editor`
 - 2º Você irá dizer qual o repositório e branch você estará fazendo o build
 - 3º Irá selecionar o template do seu projeto, no nosso caso iremos utilizar Maven e ali iremos configurar nossa Pipeline conforme está no nosso arquivo <a href="https://github.com/lucasmoraisnt/WeAr-Digital/blob/main/DevOps/pipeline.yaml">YAML</a>
 - 4º Após finalizar as configurações você irá salvar e rodar o build
+
+## CD Pipeline
+### Deploy
+- 1º Vamos criar uma nova release clicando em `New Release` 
+- 2º Você irá escolher o template que irá trabalhar, no nosso caso será o `Azure App Service deployment` e poderá dar um nome para o Stage
+- 3º Em `Artifacts` você irá adicionar o Build que nós criamos
+- 4º Em Pre-Deployment Conditions você irá ativar o filtro do artefato e adicionar a branch principal que você está utilizando
+- 5º Em `1 job, 1 task` vamos fazer as configurações do Stage 1
+- 6º Em `Azure subscription` você irá adicionar a sua Assinatura da Azure
+- 7º Em `App service name` você irá adicionar o nome do App Service que criou (é necessário que esteja exatamente igual)
+- 8º Dentro de Run on agent vamos deixar o `Agent pool` como `Azure Pipelines` e `Agent Specification` como `windows-latest`
+- 9º Em `Variables` podemos adicionar um Objeto chamado "Server" e que irá armazenar o valor "myserver.com.br"
+- 10º Por último iremos salvar no release e apertar em `Create Release` para poder rodar ela, ao finalizar o deploy basta entrar em Logs > Web App Deploy, e procurar pela linha `App Service Application URL` e por lá você poderá testar sua aplicação online
 
 ## Endpoints
 - Experimentar
